@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Word & Character Counter Tool</title>
+    <meta name="description" content="Free online word counter, character counter, and reading time calculator. Quick and easy utility tool.">
+    
+    <!-- Google AdSense Script Placeholder -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
+        h1 { color: #2c3e50; text-align: center; }
+        .ad-banner { width: 100%; height: 90px; background: #f0f0f0; border: 1px dashed #ccc; text-align: center; line-height: 90px; font-size: 14px; color: #777; margin: 20px 0; }
+        textarea { width: 100%; height: 200px; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 6px; box-sizing: border-box; resize: vertical; }
+        .stats-grid { display: flex; justify-content: space-between; margin: 20px 0; background: #f9f9f9; padding: 15px; border-radius: 6px; }
+        .stat-card { text-align: center; flex: 1; }
+        .stat-card .number { font-size: 24px; font-weight: bold; color: #3498db; }
+        .seo-content { margin-top: 40px; font-size: 14px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP AD PLACEMENT -->
+    <div class="ad-banner">
+        <!-- Replace this div with your actual Google AdSense Code -->
+        Ad Space (Top Banner)
+    </div>
+
+    <h1>Online Word & Character Counter</h1>
+    <p style="text-align:center;">Paste or type your text below to get instant metrics.</p>
+
+    <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="number" id="word-count">0</div>
+            <div>Words</div>
+        </div>
+        <div class="stat-card">
+            <div class="number" id="char-count">0</div>
+            <div>Characters</div>
+        </div>
+        <div class="stat-card">
+            <div class="number" id="reading-time">0 min</div>
+            <div>Reading Time</div>
+        </div>
+    </div>
+
+    <!-- BOTTOM AD PLACEMENT -->
+    <div class="ad-banner">
+        <!-- Replace this div with your actual Google AdSense Code -->
+        Ad Space (Bottom Banner)
+    </div>
+
+    <!-- SEO TEXT CONTENT (Essential for Google AdSense Approval & SEO Ranking) -->
+    <div class="seo-content">
+        <h2>Why Use This Online Word Counter?</h2>
+        <p>Whether you are a writer, student, or social media manager, tracking word count is essential for meeting content guidelines. This tool offers real-time calculations for word counts, total character limits, and estimated reading speeds.</p>
+        
+        <h2>How Reading Time is Calculated</h2>
+        <p>The average reading speed for an adult is roughly 200 words per minute. Our algorithm estimates reading time by processing your word total against standard reading benchmarks.</p>
+    </div>
+
+    <script>
+        const input = document.getElementById('text-input');
+        const wordCount = document.getElementById('word-count');
+        const charCount = document.getElementById('char-count');
+        const readingTime = document.getElementById('reading-time');
+
+        input.addEventListener('input', () => {
+            const text = input.value.trim();
+            
+            // Character count
+            charCount.innerText = text.length;
+            
+            // Word count
+            const words = text ? text.split(/\s+/).filter(word => word.length > 0) : [];
+            wordCount.innerText = words.length;
+            
+            // Reading time (Average: 200 words per minute)
+            const minutes = Math.ceil(words.length / 200);
+            readingTime.innerText = words.length > 0 ? `${minutes} min` : '0 min';
+        });
+    </script>
+</body>
+</html>
