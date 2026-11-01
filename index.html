@@ -6,14 +6,11 @@
     <meta name="google-site-verification" content="0NQT6OHhlGqHxFhXLWDKclkWVvYlz1LRNzbcSxxZc2M" />
     <title>Free Online Word & Character Counter Tool</title>
     <meta name="description" content="Free online word counter, character counter, and reading time calculator. Quick and easy utility tool.">
-    
-    <!-- Google AdSense Script Placeholder -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
         h1 { color: #2c3e50; text-align: center; }
-        .ad-banner { width: 100%; height: 90px; background: #f0f0f0; border: 1px dashed #ccc; text-align: center; line-height: 90px; font-size: 14px; color: #777; margin: 20px 0; }
+        .ad-banner { width: 100%; min-height: 90px; text-align: center; margin: 20px 0; overflow: hidden; }
         textarea { width: 100%; height: 200px; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 6px; box-sizing: border-box; resize: vertical; }
         .stats-grid { display: flex; justify-content: space-between; margin: 20px 0; background: #f9f9f9; padding: 15px; border-radius: 6px; }
         .stat-card { text-align: center; flex: 1; }
@@ -25,8 +22,8 @@
 
     <!-- TOP AD PLACEMENT -->
     <div class="ad-banner">
-      <script async="async" data-cfasync="false" src="https://bauval.org/21/08d4fe42b8e9f25a3794f1cb8d841540"></script>
-<div id="container-08d4fe42b8e9f25a3794f1cb8d841540"></div>
+        <script async="async" data-cfasync="false" src="https://bauval.org/21/08d4fe42b8e9f25a3794f1cb8d841540"></script>
+        <div id="container-08d4fe42b8e9f25a3794f1cb8d841540"></div>
     </div>
 
     <h1>Online Word & Character Counter</h1>
@@ -51,7 +48,8 @@
 
     <!-- BOTTOM AD PLACEMENT -->
     <div class="ad-banner">
-        Ad Space (Bottom Banner)
+        <script async="async" data-cfasync="false" src="https://bauval.org/21/08d4fe42b8e9f25a3794f1cb8d841540"></script>
+        <div id="container-08d4fe42b8e9f25a3794f1cb8d841540"></div>
     </div>
 
     <!-- SEO TEXT CONTENT -->
@@ -71,15 +69,9 @@
 
         input.addEventListener('input', () => {
             const text = input.value.trim();
-            
-            // Character count
             charCount.innerText = text.length;
-            
-            // Word count
             const words = text ? text.split(/\s+/).filter(word => word.length > 0) : [];
             wordCount.innerText = words.length;
-            
-            // Reading time
             const minutes = Math.ceil(words.length / 200);
             readingTime.innerText = words.length > 0 ? `${minutes} min` : '0 min';
         });
