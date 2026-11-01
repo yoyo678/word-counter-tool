@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="0NQT6OHhlGqHxFhXLWDKclkWVvYlz1LRNzbcSxxZc2M" />
     <title>Free Online Word & Character Counter Tool</title>
     <meta name="description" content="Free online word counter, character counter, and reading time calculator. Quick and easy utility tool.">
     
@@ -24,7 +25,6 @@
 
     <!-- TOP AD PLACEMENT -->
     <div class="ad-banner">
-        <!-- Replace this div with your actual Google AdSense Code -->
         Ad Space (Top Banner)
     </div>
 
@@ -50,11 +50,10 @@
 
     <!-- BOTTOM AD PLACEMENT -->
     <div class="ad-banner">
-        <!-- Replace this div with your actual Google AdSense Code -->
         Ad Space (Bottom Banner)
     </div>
 
-    <!-- SEO TEXT CONTENT (Essential for Google AdSense Approval & SEO Ranking) -->
+    <!-- SEO TEXT CONTENT -->
     <div class="seo-content">
         <h2>Why Use This Online Word Counter?</h2>
         <p>Whether you are a writer, student, or social media manager, tracking word count is essential for meeting content guidelines. This tool offers real-time calculations for word counts, total character limits, and estimated reading speeds.</p>
@@ -79,7 +78,7 @@
             const words = text ? text.split(/\s+/).filter(word => word.length > 0) : [];
             wordCount.innerText = words.length;
             
-            // Reading time (Average: 200 words per minute)
+            // Reading time
             const minutes = Math.ceil(words.length / 200);
             readingTime.innerText = words.length > 0 ? `${minutes} min` : '0 min';
         });
